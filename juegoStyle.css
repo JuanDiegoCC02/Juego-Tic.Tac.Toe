@@ -1,0 +1,36 @@
+body {
+    width:  100vw;
+    height: 100vh;
+    background-color: rgb(77, 144, 144);
+    color: black;
+    font-family: cursive;
+   
+   
+   place-items: center;
+  
+    
+    
+}
+.gameTicTacToe{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+
+height: 300px;
+    width: 400px;
+   
+    position: relative;
+    
+
+}
+.cell{  
+    
+    font-size: 3rem;
+    background-color: rgb(13, 117, 149);
+    border: 1px solid rgb(67, 222, 231);
+}
+.btnRestart{
+    border-radius: 15px;
+    background-color: rgb(211, 192, 200);
+    border-color: rgb(66, 67, 39)
+
+}
