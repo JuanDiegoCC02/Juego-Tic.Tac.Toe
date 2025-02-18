@@ -1,7 +1,8 @@
 Quizz
 Estudiante: Juan Diego Corella Camacho
 Cede: Desamparados Parque La Libertad
-
+ (trello) https://trello.com/invite/b/67ab772b0c63382a92fd3085/ATTI7b3bbc66b2443a5e017dbd02ff73965d39B0984A/juego-tictactoe
+ 
 FUNCIONAMIENTO JUEGO TIC-TAC-TOE (Codigo)
 El Funcionamiento de este codigo consiste en replicar el Juego del Tic-Tac-Toe.
 Para lograr el funcionamiento del juego inicialmente empece por declarar la estructura del talero del juego esto en CSS, además de declarar los Titulos, Turnos, Contadores y Botones ya teniendo la estructura base me enfoque en darle funcionamiento a el tablero para poder marcar las posiciones de X y O además de las respectivas condiciones de Victoria o Empate. 
