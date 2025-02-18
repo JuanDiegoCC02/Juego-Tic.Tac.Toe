@@ -8,10 +8,14 @@
 </head>
 <body>
     <header>
-        <H1>GAME  Tic-Tac-Toe</H1>
+        <H1 class="tituloTic-Tac-Toe"> Tic-Tac-Toe <br> Game</H1>
+        
     </header>
 
     <main>
+        <div><h3 id="turno">  </h3></div>
+      <!-- <input id="singlerPlayer" type="button" value="Singler Player">--> 
+       <!-- <input id="twoPlayer" type="button" value="Two Player">--> 
 
         <div id="game" class="gameTicTacToe">
             <div class="cell" id="0"></div>
@@ -26,10 +30,20 @@
         </div>
         
         
+         <div>
+            <input class="btnR" id="btnRestart" type="button" value="Restart">
+         
+            <input class="btnNG" id="btnNewGame" type="button" value="New Game">
+        </div>
 
-        <input class="btnRestart" type="button" value="Restart">
         <br>
-        <div><h2 id="notificacion">  </h2></div>
+        <div id="estadistica"><h2 id="notificacion">  </h2></div>
+
+        
+
+        <div><h3 id="vitorias">  </h3></div>
+        <div><h3 id="victorias">  </h3></div>
+        <div><h3 id="empates">  </h3></div>
     </main>
 
 

@@ -3,8 +3,7 @@ body {
     height: 100vh;
     background-color: rgb(77, 144, 144);
     color: black;
-    font-family: cursive;
-   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    
    place-items: center;
   
@@ -12,25 +11,43 @@ body {
     
 }
 .gameTicTacToe{
-display: grid;
-grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-height: 300px;
-    width: 400px;
+    height: 400px;
+    width: 500px;
    
     position: relative;
     
 
 }
 .cell{  
-    
-    font-size: 3rem;
+    align-content: center;
+    text-align: center;
+    font-size: 1rem;
     background-color: rgb(13, 117, 149);
     border: 1px solid rgb(67, 222, 231);
 }
-.btnRestart{
+.btnR{
+    color: white;
     border-radius: 15px;
-    background-color: rgb(211, 192, 200);
-    border-color: rgb(66, 67, 39)
+    background-color: rgb(10, 104, 121);
+    border-color: rgb(10, 120, 96)
 
 }
+.btnNG{
+    color: white;
+    border-radius: 15px;
+    background-color: rgb(111, 42, 139);
+    border-color: rgb(22, 65, 114)
+}
+.tituloTic-Tac-Toe{
+border-color: rgb(84, 5, 67);
+    border-style: double;
+    color: rgb(5, 18, 82);
+    text-align: center;
+}
+
+    
