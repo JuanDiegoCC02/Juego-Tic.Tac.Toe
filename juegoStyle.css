@@ -1,7 +1,7 @@
 body {
     width:  100vw;
     height: 100vh;
-    background-color: rgb(77, 144, 144);
+    background-color: rgba(69, 5, 5, 0.945);
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    
@@ -16,19 +16,27 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    height: 400px;
+    height: 700px;
     width: 500px;
    
     position: relative;
     
+    height: 80vw;
+    max-height: 400px;
+    width: 80vw;
+    max-width: 500px;
+    position: relative;
+    margin: 20px;
 
 }
 .cell{  
+    color: rgb(172, 8, 22);
     align-content: center;
     text-align: center;
-    font-size: 1rem;
-    background-color: rgb(13, 117, 149);
-    border: 1px solid rgb(67, 222, 231);
+    font-size: 2rem;
+    background-color: rgb(39, 51, 55);
+    border: 1px solid rgba(77, 2, 2, 0.886);
+
 }
 .btnR{
     color: white;
@@ -44,10 +52,47 @@ body {
     border-color: rgb(22, 65, 114)
 }
 .tituloTic-Tac-Toe{
-border-color: rgb(84, 5, 67);
-    border-style: double;
-    color: rgb(5, 18, 82);
+border-color: rgb(104, 4, 4);
+    border-style:  groove;
+    border-width: 10px;
+    color: rgb(0, 0, 0);
     text-align: center;
+    padding: 15px;
+    
+    margin: 20px;
+    width: 80vw;
+    max-width: 500px;
+}
+.contador{
+    border-radius: 15px;
+    border-style: solid;
+    
+    border-color: black;
+    background-color: rgb(121, 21, 21);
+    padding: 15px;
+    font-family: 'Times New Roman', Times, serif;
+
+    width: 80vw;
+    max-width: 500px;
+    margin: 10px;
+}
+.turnoStyle{
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
 }
 
+/* Media Queries */
+@media (max-width: 600px) {
+    .tituloTic-Tac-Toe {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
     
+    .contador, .btnR, .btnNG {
+        padding: 8px 16px;
+    }
+    
+    .cell {
+        font-size: 1.5rem;
+    }
+}

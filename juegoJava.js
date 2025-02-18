@@ -42,6 +42,7 @@ const startGame = () =>{
             setTimeout (() => {
                 marcarCirculo()
             } ,500)
+            
             if (!checkWinner()) {                                       
                                                      
                 if (win) {                                              
@@ -52,19 +53,17 @@ const startGame = () =>{
                 winnerMsg(winner);                                      
             }
         }
-        turno.innerHTML = "Es turno de O"
+        turno.innerHTML = "Tú turno O"
     }));
 }
+
 function marcarCirculo (){
-    
     let filtro = cells.filter(cell => cell.innerHTML === "")          //Filtro de Celdas
      const aleatorio = Math.floor(Math.random() * filtro.length);      //Busca una cell aleatoria
         if (filtro.length > 0 && !gameOver) {
             filtro[aleatorio].innerHTML = "O"
             checkWinner()
-
-        }
-
+         }
           let index = Array.from(cells).indexOf(filtro[aleatorio])
             spaces[index] = "O"
             
@@ -73,39 +72,35 @@ function marcarCirculo (){
              } else if (esEmpate()) {
                 empateMsg();
              }
-            turno.innerHTML = "Es turno de X"
-   
+            turno.innerHTML = "Tú turno  X "
 }
 
 function winnerMsg(player){                         //Funcion del msj ganador
-    notificacion.innerHTML = `¡Felicidades Ganaste ${player}  !`
-    gameOver = true;
-    if (player === "X"){
-       
-        localStorage.setItem("victoriasX", victoriasX)
-
-        notificacion.innerHTML += `Victorias X: ${victoriasX}, Victorias O: ${victoriasO}`;
-        victoriasX++;
-
-    }else if (player === "O"){
-        victoriasO++;
-        localStorage.setItem("victoriasO", victoriasO)
-        notificacion.innerHTML += `Victorias X: ${victoriasX}, Victorias O: ${victoriasO}`;
-        
+      notificacion.innerHTML = `¡Felicidades Ganaste ${player}  !`
+         gameOver = true;
+         if (player === "X"){
         
 
+         localStorage.setItem("victoriasX", victoriasX)
+         notificacion.innerHTML += `Victorias X: ${victoriasX}, Victorias O: ${victoriasO}`;
+         victoriasX++;
+
+         }else if (player === "O"){
+         victoriasO++;
+         localStorage.setItem("victoriasO", victoriasO)
+         notificacion.innerHTML += `Victorias X: ${victoriasX}, Victorias O: ${victoriasO}`;
     }
 }
-function empateMsg () {
-    notificacion.innerHTML = " Empataste  "
-    empatesGame++;
-    localStorage.setItem("empatesGame", empatesGame)
-    gameOver = true; 
-    notificacion.innerHTML = `Victorias X: ${victoriasX}, Victorias O: ${victoriasO}, Empates: ${empatesGame}`;
 
+function empateMsg () {
+         notificacion.innerHTML = " Empataste  "
+         empatesGame++;
+         localStorage.setItem("empatesGame", empatesGame)
+         gameOver = true; 
+         notificacion.innerHTML = `Victorias X: ${victoriasX}, Victorias O: ${victoriasO}, Empates: ${empatesGame}`;
 }
 
-function checkWinner() {                            //Cumplimiento de la funcion de checkWinner
+function checkWinner() {                            //Funcionamiento de la funcion de checkWinner
     for (let combo of winCombos) {
         const [a, b, c] = combo;
           if (cells[a].innerHTML && cells[a].innerHTML === cells[b].innerHTML && cells[a].innerHTML === cells[c].innerHTML) {
@@ -113,45 +108,40 @@ function checkWinner() {                            //Cumplimiento de la funcion
             console.log(win);
             console.log(cells[a].innerHTML);
             winner = cells[a].innerHTML;   
-            return true;                         // Muestra el simbolo de ganador.
+            return true;                             // Muestra el simbolo de ganador.
         }
       
     }
     return false;                                   // No hay ganador.
 }
 
-
 function esEmpate() {
-    let empate = true;                           // Se verifica que es empate
-    cells.forEach(cell => {
-        if (cell.innerHTML === "") {
-            empate = false;                      // Si hay cells vacias el juego continua
+             let empate = true;                           // Se verifica que es empate
+              cells.forEach(cell => {
+             if (cell.innerHTML === "") {
+             empate = false;                      // Si hay cells vacias el juego continua
         } 
-
-
     });
     
     return empate ;
-    
 }
 
 function restartGame(){
-    localStorage.clear();
-    window.location.reload();
-
+            localStorage.clear();
+            window.location.reload();
 }
-btnRestart.addEventListener("click", restartGame);
+     btnRestart.addEventListener("click", restartGame);
 
 function newGame() {
-    cells.forEach((cell) => (cell.innerHTML = ""));                              // Reinicia las cells
-    spaces.fill(null);                                                          // Limpiar el array spaces
-    win = false;
-    winner = "";
-    gameOver = false;
-    turno.innerHTML = "Es turno de X";                                          // Empieza new game
-    notificacion.innerHTML = `Victorias X: ${localStorage.getItem("victoriasX")} / Victorias O: ${localStorage.getItem("victoriasO") || 0} / Empates: ${localStorage.getItem("empatesGame") || 0}`;   // Muestra valores del LocalStorage
+            cells.forEach((cell) => (cell.innerHTML = ""));                              // Reinicia las cells
+            spaces.fill(null);                                                          // Limpiar el array spaces
+            win = false;
+            winner = "";
+            gameOver = false;
+            turno.innerHTML = "Es turno de X";                                          // Empieza new game
+            notificacion.innerHTML = `Victorias X: ${localStorage.getItem("victoriasX")} / Victorias O: ${localStorage.getItem("victoriasO") || 0} / Empates: ${localStorage.getItem("empatesGame") || 0}`;   // Muestra valores del LocalStorage
   }
-  btnNewGame.addEventListener("click", newGame);
+      btnNewGame.addEventListener("click", newGame);
 
 
 

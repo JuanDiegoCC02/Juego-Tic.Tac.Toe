@@ -13,11 +13,10 @@
     </header>
 
     <main>
-        <div><h3 id="turno">  </h3></div>
-      <!-- <input id="singlerPlayer" type="button" value="Singler Player">--> 
-       <!-- <input id="twoPlayer" type="button" value="Two Player">--> 
+        <div><h3 class="turnoStyle" id="turno">  </h3></div>
+       
 
-        <div id="game" class="gameTicTacToe">
+        <div id="game" class="gameTicTacToe">                           <!--Declaración de los div para el tablero del Tic-Tac-Toe -->
             <div class="cell" id="0"></div>
             <div class="cell" id="1"></div>
             <div class="cell" id="2"></div>
@@ -29,21 +28,21 @@
             <div class="cell" id="8"></div>
         </div>
         
+        <br>
+        <br>
         
          <div>
-            <input class="btnR" id="btnRestart" type="button" value="Restart">
+            <input class="btnR" id="btnRestart" type="button" value="Restart">                              <!--Btn para Actualizar todo y el LocalStorage-->
          
-            <input class="btnNG" id="btnNewGame" type="button" value="New Game">
+            <input class="btnNG" id="btnNewGame" type="button" value="New Game">                            <!--Btn para limpiar el tablero-->
         </div>
 
         <br>
-        <div id="estadistica"><h2 id="notificacion">  </h2></div>
+        <div id="estadistica"><h2 class="contador" id="notificacion">  </h2></div>                          <!--Contenedor del Contador-->
 
         
 
-        <div><h3 id="vitorias">  </h3></div>
-        <div><h3 id="victorias">  </h3></div>
-        <div><h3 id="empates">  </h3></div>
+        
     </main>
 
 
